@@ -1,0 +1,12 @@
+[submodule "app/rims"]
+	path = app/rims
+	url = https://github.com/justinwatkinsarchient/act_rims.git
+	ignore = dirty
+[submodule "app/testadmin"]
+	path = app/testadmin
+	url = https://github.com/justinwatkinsarchient/act_testadmin_portal.git
+	ignore = dirty
+[submodule "app/scoring"]
+	path = app/scoring
+	url = https://github.com/justinwatkinsarchient/act_scoring_portal.git
+	ignore = dirty

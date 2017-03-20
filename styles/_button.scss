@@ -1,0 +1,77 @@
+/**
+* button.scss
+* -------------------------------
+* Override for Bootstrap's _button.scss.
+*/
+
+@mixin gradient-button-variant($color, $background, $border) {
+  color: $color;
+  background-color: $background;
+  border-color: $border;
+  @include gradient-vertical($background, darken($background, 10%));
+  &:focus,
+  &.focus {
+    color: $color;
+    background-color: darken($background, 10%);
+        border-color: darken($border, 25%);
+  }
+  &:hover {
+    color: $color;
+    @include gradient-vertical(darken($background, 10%), $background);
+    background-color: darken($background, 10%);
+        border-color: darken($border, 12%);
+        
+  }
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    color: $color;
+    background-color: darken($background, 10%);
+        border-color: darken($border, 12%);
+        @include gradient-vertical(darken($background, 10%), darken($background, 20%));
+    &:hover,
+    &:focus,
+    &.focus {
+      color: $color;
+      background-color: darken($background, 17%);
+          border-color: darken($border, 25%);
+          @include gradient-vertical(darken($background, 10%), darken($background, 20%));
+    }
+  }
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    background-image: none;
+  }
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &:hover,
+    &:focus,
+    &.focus {
+      background-color: $background;
+          border-color: $border;
+    }
+  }
+
+  .badge {
+    color: $background;
+    background-color: $color;
+  }
+}
+
+//increasing input group button padding to match form height as per ACT UX.
+.input-group-btn:last-child > .btn, .input-group-btn:last-child > .btn-group
+{
+    padding-bottom: 7px;    
+}
+.btn-default:focus, .btn-default.focus {
+  border-color: #767676;
+}
+$btn-light-color:              #fff;
+$btn-light-bg:                 #10afe8;
+$btn-light-border:             darken($btn-light-bg, 5%) !default;
+
+.btn-light {
+  @include gradient-button-variant($btn-light-color, $btn-light-bg, $btn-light-border);
+}

@@ -1,0 +1,28 @@
+{
+    "compilerOptions": {
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "target": "es5",
+        "module": "es2015",
+        "moduleResolution": "node",
+        "removeComments": false,
+        "sourceMap": true,
+        "baseUrl": ".",
+        "paths": {
+            "angular": [
+                "jspm_packages/npm/@types/angular@1.6.6"
+            ],
+            "angular-ui-router": [
+                "jspm_packages/npm/angular-ui-router@1.0.0-rc.1"
+            ],
+            "systemjs" : [
+                "jspm_packages/npm/systemjs@0.20.0"
+            ]
+        },
+        "typeRoots" : ["./jspm_packages", "./jspm_packages/@types", "./node_modules/@types", "./node_modules/"]
+    },
+    "exclude": [
+        "node_modules",
+        "jspm_packages"
+    ]
+}

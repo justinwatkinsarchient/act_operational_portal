@@ -1,0 +1,42 @@
+[
+    {
+            "name": "app.admin.**",
+            "url": "/admin",
+            "lazyModule": "app/portal/module",
+            "data": {
+                "title": "Main Component",
+                "navigation": "Admin",
+                "state": "app.admin.index"
+            }
+    },
+    {
+            "name": "app.rims.**",
+            "url": "/rims",
+            "lazyModule": "app/rims/module",
+            "data": {
+                "title": "Rims",
+                "navigation": "Rims",
+                "state": "app.rims.index"
+            }
+        },
+        {
+            "name": "app.testadmin.**",
+            "url": "/testadmin",
+            "lazyModule": "app/testadmin/module",
+            "data": {
+                "title": "TestAdmin",
+                "navigation": "Test Admin",
+                "state": "app.testadmin.index"
+            }
+        },
+        {
+            "name": "app.scoring.**",
+            "url": "/scoring",
+            "lazyModule": "app/scoring/module",
+            "data": {
+                "title": "Scoring",
+                "navigation": "Scoring",
+                "state": "app.scoring.index"
+            }
+        }
+]
